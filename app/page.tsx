@@ -274,7 +274,7 @@ const IResidenceLanding: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight"
               >
                 {slides[currentSlide].title}
               </motion.h1>
@@ -282,7 +282,7 @@ const IResidenceLanding: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed"
+                className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-10 leading-relaxed"
               >
                 {slides[currentSlide].subtitle}
               </motion.p>
@@ -293,14 +293,14 @@ const IResidenceLanding: React.FC = () => {
                 transition={{ delay: 0.6, duration: 0.6 }}
                 className="flex flex-wrap gap-4 justify-center md:justify-start"
               >
-                <button className="px-8 py-3.5 bg-gradient-to-r from-[#1ba89a] to-[#16968a] text-white rounded-full font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                <button className="px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-[#1ba89a] to-[#16968a] text-white rounded-full font-semibold text-base sm:text-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
                   {slides[currentSlide].cta1}
                 </button>
                 <a
                   href="https://iresidence.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-3.5 border-2 border-[#1ba89a] text-[#1a3d4d] rounded-full font-semibold text-lg hover:bg-[#1ba89a] hover:text-white transition-all duration-300"
+                  className="px-6 sm:px-8 py-3 sm:py-3.5 border-2 border-[#1ba89a] text-[#1a3d4d] rounded-full font-semibold text-base sm:text-lg hover:bg-[#1ba89a] hover:text-white transition-all duration-300"
                 >
                   {slides[currentSlide].cta2}
                 </a>
@@ -346,7 +346,7 @@ const IResidenceLanding: React.FC = () => {
       </section>
 
       {/* ---------- LIFESTYLE SECTION ---------- */}
-      <section id="lifestyle" className="py-24 px-6 bg-white">
+      <section id="lifestyle" className="py-16 md:py-24 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -355,17 +355,17 @@ const IResidenceLanding: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2
-              className="text-4xl md:text-5xl font-bold mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4"
               style={{ color: mainColor }}
             >
               The i-Residence Lifestyle
             </h2>
-            <p className="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 mb-12 md:mb-16 max-w-3xl mx-auto">
               Premium by Design
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {lifestyleCards.map((item, i) => (
               <motion.div
                 key={i}
@@ -374,21 +374,21 @@ const IResidenceLanding: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                className="bg-gradient-to-br from-white to-[#f0fdf4] rounded-3xl p-8 shadow-md border border-[#e6f6f4] hover:shadow-2xl transition-all duration-300 flex flex-col items-start gap-4 group"
+                className="bg-gradient-to-br from-white to-[#f0fdf4] rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-md border border-[#e6f6f4] hover:shadow-2xl transition-all duration-300 flex flex-col items-start gap-3 md:gap-4 group"
               >
                 <div
-                  className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-3 group-hover:scale-110 transition-transform duration-300"
+                  className="inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-xl md:rounded-2xl mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300"
                   style={{ background: `${accentColor}15` }}
                 >
                   {React.cloneElement(item.icon, { style: { color: mainColor } } as any)}
                 </div>
                 <h3
-                  className="text-xl md:text-2xl font-semibold text-left"
+                  className="text-lg sm:text-xl md:text-2xl font-semibold text-left"
                   style={{ color: mainColor }}
                 >
                   {item.title}
                 </h3>
-                <p className="text-gray-600 text-left leading-relaxed">{item.description}</p>
+                <p className="text-sm sm:text-base text-gray-600 text-left leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -398,22 +398,22 @@ const IResidenceLanding: React.FC = () => {
       {/* ---------- JOURNEY SECTION ---------- */}
       <section
         id="journey"
-        className="py-24 px-6 bg-gradient-to-br from-[#e0f7f5] to-[#f0fdf4] flex flex-col md:flex-row items-center justify-center gap-12 max-w-7xl mx-auto rounded-3xl shadow-xl my-20"
+        className="py-16 md:py-24 px-4 sm:px-6 bg-gradient-to-br from-[#e0f7f5] to-[#f0fdf4] flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 max-w-7xl mx-auto rounded-2xl md:rounded-3xl shadow-xl my-12 md:my-20"
       >
         <motion.div 
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="md:w-1/2 flex flex-col gap-6"
+          className="md:w-1/2 flex flex-col gap-4 md:gap-6"
         >
           <h2
-            className="text-4xl md:text-5xl font-bold leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
             style={{ color: mainColor }}
           >
             Start Your Premium Living Journey Today
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
             Pay rent. Track your records. Book visitors. Move in or move out, all
             from one app.
             <br />
@@ -430,14 +430,14 @@ const IResidenceLanding: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="md:w-1/2 flex flex-col items-start gap-4"
         >
-          <button className="px-8 py-3.5 bg-gradient-to-r from-[#1ba89a] to-[#16968a] text-white rounded-full font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+          <button className="px-6 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-[#1ba89a] to-[#16968a] text-white rounded-full font-semibold text-base sm:text-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
             Download App
           </button>
           <a
             href="https://iresidence.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3.5 border-2 border-[#1ba89a] text-[#1a3d4d] rounded-full font-semibold text-lg hover:bg-[#1ba89a] hover:text-white transition-all duration-300"
+            className="px-6 sm:px-8 py-3 sm:py-3.5 border-2 border-[#1ba89a] text-[#1a3d4d] rounded-full font-semibold text-base sm:text-lg hover:bg-[#1ba89a] hover:text-white transition-all duration-300"
           >
             Login
           </a>
@@ -445,26 +445,26 @@ const IResidenceLanding: React.FC = () => {
       </section>
 
       {/* ---------- FOOTER ---------- */}
-      <footer id="contact-info" className="bg-gradient-to-br from-[#1a3d4d] to-[#15303c] text-white py-20 px-6 mt-20">
-        <div className="max-w-4xl mx-auto flex flex-col items-center gap-8 text-center">
-          <h3 className="text-3xl font-bold mb-2">Get In Touch</h3>
-          <p className="text-gray-300 mb-6">We're here to help you with anything you need</p>
-          <div className="flex flex-col gap-4 text-lg">
-            <div className="flex items-center gap-3 justify-center hover:text-[#1ba89a] transition-colors">
-              <AtSign className="w-6 h-6" />
-              <span>
+      <footer id="contact-info" className="bg-gradient-to-br from-[#1a3d4d] to-[#15303c] text-white py-12 md:py-20 px-4 sm:px-6 mt-12 md:mt-20">
+        <div className="max-w-4xl mx-auto flex flex-col items-center gap-6 md:gap-8 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-1 md:mb-2">Get In Touch</h3>
+          <p className="text-sm sm:text-base text-gray-300 mb-4 md:mb-6">We're here to help you with anything you need</p>
+          <div className="flex flex-col gap-3 md:gap-4 text-base sm:text-lg">
+            <div className="flex items-center gap-2 md:gap-3 justify-center hover:text-[#1ba89a] transition-colors">
+              <AtSign className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
+              <span className="text-sm sm:text-base md:text-lg">
                 <strong>support@iresidence.co</strong> — For Residents
               </span>
             </div>
-            <div className="flex items-center gap-3 justify-center hover:text-[#1ba89a] transition-colors">
-              <MailCheck className="w-6 h-6" />
-              <span>
+            <div className="flex items-center gap-2 md:gap-3 justify-center hover:text-[#1ba89a] transition-colors">
+              <MailCheck className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
+              <span className="text-sm sm:text-base md:text-lg">
                 <strong>hello@iresidence.co</strong> — Vendors
               </span>
             </div>
-            <div className="flex items-center gap-3 justify-center hover:text-[#1ba89a] transition-colors">
-              <Phone className="w-6 h-6" />
-              <span>
+            <div className="flex items-center gap-2 md:gap-3 justify-center hover:text-[#1ba89a] transition-colors">
+              <Phone className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
+              <span className="text-sm sm:text-base md:text-lg">
                 <strong>Contact:</strong> 071787888828
               </span>
             </div>
@@ -472,8 +472,8 @@ const IResidenceLanding: React.FC = () => {
         </div>
       </footer>
 
-      <section className="bg-[#0f242e] text-white py-6 text-center">
-        <p className="text-gray-400">&copy; {new Date().getFullYear()} i-Residence. All rights reserved.</p>
+      <section className="bg-[#0f242e] text-white py-4 md:py-6 text-center px-4">
+        <p className="text-xs sm:text-sm text-gray-400">&copy; {new Date().getFullYear()} i-Residence. All rights reserved.</p>
       </section>
     </div>
   );
